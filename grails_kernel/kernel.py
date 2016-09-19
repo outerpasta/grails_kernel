@@ -69,9 +69,9 @@ class GrailsKernel(Kernel):
                     if exception:
                         self.send_response(self.iopub_socket, 'stream', {
                             'name': 'stderr', 'text': exception})
-
-                    self.send_response(self.iopub_socket, 'stream', {
-                        'name': 'stdout', 'text': result})
+                    if result:
+                        self.send_response(self.iopub_socket, 'stream', {
+                            'name': 'stdout', 'text': result})
 
             return {
                 'status': 'ok',
