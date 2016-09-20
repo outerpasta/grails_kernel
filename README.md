@@ -3,7 +3,7 @@ enabled application.
 
 To install:
 
-    pip install pip install git+git://github.com/outerpasta/grails-kernel.git
+    pip install git+git://github.com/outerpasta/grails-kernel.git
     python -m grails_kernel.install
 
 To use it, run one of:
